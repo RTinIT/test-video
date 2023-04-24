@@ -3,16 +3,26 @@ class Video {
   public played: boolean;
 
   constructor(parentNode: HTMLElement | null, src: string, className = '') {
-    const element = document.createElement("video");
-    element.className = className;
-    element.setAttribute("src", src);
-    element.setAttribute("muted", "");
-    element.setAttribute("autoplay", "");
-    element.setAttribute("loop", "");
+    const video = document.createElement("video");
+    const source = document.createElement("source");
+
+    video.className = className;
+    video.muted = true;
+    video.setAttribute("muted", ""); // could be removed
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
+
+    source.src = src;
+    source.type = "video/mp4";
+
+    video.appendChild(source);
+
     if (parentNode) {
-      parentNode.append(element);
+      parentNode.append(video);
     }
-    this.node = element as HTMLVideoElement;
+
+    this.node = video as HTMLVideoElement;
     this.played = false;
   }
 
