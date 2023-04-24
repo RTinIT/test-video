@@ -1,4 +1,4 @@
-import Control from './Control';
+import Control from './control';
 import Video from "./Video"
 
 export class App {
