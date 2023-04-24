@@ -1,0 +1,24 @@
+.btn {
+  position: absolute;
+  bottom: .8em;
+  right: .8em;
+  border: none;
+  color: rgba(255, 255, 255, 0.359);
+  background: transparent;
+  transition: .3s;
+  cursor: pointer;
+  letter-spacing: .08em;
+  font-size: 2em;
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+.btn:hover {
+  color: rgba(255, 255, 255, 0.878);
+}
+
+@media (max-width: 767px) {
+  .btn {
+    font-size: 1em;
+  }
+}

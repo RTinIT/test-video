@@ -1,0 +1,9 @@
+.video {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  max-height: 80vh;
+  filter: brightness(0.7);
+  object-fit: cover;
+  object-position: right;
+}
